@@ -1590,5 +1590,9 @@ button
         border-bottom: 1px solid #cdcdcd;
         padding: 14px 60px;
     }
+     .slidan img{
+        height: 120px;
+        width: 50px;
+    }
     }
    
