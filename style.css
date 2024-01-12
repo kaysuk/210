@@ -9,6 +9,8 @@
 body {
     overflow-x: hidden;
 }
+
+
 .container {
     padding: 0 10px;
     margin: 0 auto;
@@ -813,12 +815,10 @@ box-shadow: 0px 0px 58px 0px rgba(34, 60, 80, 0.29);
 
 .review_scroll_block {
     text-align: center;
- 
+   
 }
 .review_text {
     padding-bottom: 20px;
-    border-right: 1px solid #cdcdcd;
-    padding: 14px 60px;
 }
 .review_author_name {
     margin-top: 15px;
@@ -919,6 +919,81 @@ button
 /*---by Andy-*/
 
 
+/*Modal*/
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: table;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .modal-container {
+    position: relative; 
+
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #040613;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+  }
+  
+  .modal-body {
+    margin: 20px 0;
+  }
+  
+  .modal-default-button {
+    float: right;
+  }
+
+  .field--name-field-block-with-form-value form
+    
+  {
+    width: 100%;
+  }
+  
+  /*
+   * The following styles are auto-applied to elements with
+   * transition="modal" when their visibility is toggled
+   * by Vue.js.
+   *
+   * You can easily play with the modal transition by editing
+   * these styles.
+   */
+  
+  .modal-enter {
+    opacity: 0;
+  }
+  
+  .modal-leave-active {
+    opacity: 0;
+  }
+  
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  /*end Modal*/
 
 /*--------media----------*/
 
@@ -928,9 +1003,16 @@ button
     {
         width: 80%;
     }
-}
-@media (min-width: 510px)
-{
+  
+   }
+   @media (min-width: 510px)
+    {
+        .field--name-field-block-with-form-value form
+    
+  {
+    width: 480px;
+  }
+    
    .main__title
     {
         font-size: 42px;
@@ -1420,9 +1502,7 @@ button
     font-style: normal; 
     font-weight: bold; 
   } 
-/*///////////////////////////////////////////////////////////////*/
-
-.slick-arrow {
+  .slick-arrow {
     width: 16px;
     height: 32px;
     border: none;
@@ -1486,6 +1566,12 @@ button
     line-height: 1.2;
     color: #050c33;
     outline: none;
+    
+}
+.review_text {
+    padding-bottom: 20px;
+    border-right: 1px solid #cdcdcd;
+    padding: 14px 60px;
 }
 @media (max-width: 776px){
     .review_scroll_block, .review_body_block {
@@ -1500,8 +1586,9 @@ button
     }
     .review_text {
         padding-bottom: 20px;
-        border-right: none;
+        border-right: none; 
         border-bottom: 1px solid #cdcdcd;
         padding: 14px 60px;
     }
     }
+   
